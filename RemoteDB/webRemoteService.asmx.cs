@@ -334,7 +334,7 @@ namespace RemoteDB
                     con = new MySqlConnection(info);
                     con.Open();
 
-                    string day = "CREATE TABLE DAY(DAY VARCHAR(30),PLACE VARCHAR(30),LUG_NUM VARCHAR(10),MONEY VARCHAR(10),PERSON VARCHAR(10),GA_TIME VARCHAR(30),UL_TIME VARCHAR(30),primary key(DAY,PLACE,PERSON))";//"create table bill(lug_number varchar(15) Primary Key,st_date varchar(15),state varchar(5),ch_person varchar(15),docu_number varchar(30),phone_number varchar(15),lug_count varchar(5),check_point varchar(15),deposit_place varchar(15),acp_staff varchar(15),gv_staff varchar(15),rev_person varchar(15),pre_date varchar(15),end_date varchar(15),pre_pay varchar(5),pay varchar(5),importance varchar(5),mark varchar(50))";
+                    string day = "CREATE TABLE DAY(DAY VARCHAR(30),PLACE VARCHAR(30),LUG_NUM VARCHAR(10),MONEY VARCHAR(10),PERSON VARCHAR(10),GA_TIME VARCHAR(30),UL_TIME VARCHAR(30),primary key(DAY,PLACE,PERSON))";
                     cmd = new MySqlCommand(day, con);
                     cmd.ExecuteNonQuery();
 
@@ -342,7 +342,7 @@ namespace RemoteDB
                     cmd = new MySqlCommand(mouth, con);
                     cmd.ExecuteNonQuery();
 
-                    string bill = "CREATE TABLE BILL(LUG_NUMBER varchar(30) Primary Key,ST_DATE varchar(30),STATE varchar(10),CHECK_PERSON varchar(100),DOCU_NUMBER varchar(100),PHONE_NUMBER varchar(50),LUG_COUNT varchar(10),CHECK_POINT varchar(50),DEPOSIT_PLACE varchar(50),ACP_STAFF varchar(100),GV_STAFF varchar(30),REV_PERSON varchar(200),PRE_DATE varchar(30),END_DATE varchar(30),PRY_PAY varchar(10),PAY varchar(10),IMPORTANT varchar(10),UPDATE_TIME varchar(50),LABEL varchar(100),MARK varchar(200))";
+                    string bill = "CREATE TABLE BILL(LUG_NUMBER varchar(30) Primary Key,ST_DATE varchar(30),STATE varchar(10),CH_PERSON varchar(100),DOCU_NUMBER varchar(100),PHONE_NUMBER varchar(50),LUG_COUNT varchar(10),CHECK_POINT varchar(50),DEPOSIT_PLACE varchar(50),ACP_STAFF varchar(100),GV_STAFF varchar(100),REV_PERSON varchar(200),PRE_DATE varchar(30),END_DATE varchar(30),PRY_PAY varchar(10),PAY varchar(10),IMPORTANT varchar(10),UPDATE_TIME varchar(50),LABEL varchar(100),MARK varchar(200))";
                     cmd = new MySqlCommand(bill, con);
                     cmd.ExecuteNonQuery();
                     //初始化 恢复数据库
